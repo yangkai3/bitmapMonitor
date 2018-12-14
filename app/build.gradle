@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-aspectjx'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     defaultConfig {
         applicationId "jeffery.com.bitmapmonitor"
         minSdkVersion 16
