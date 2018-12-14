@@ -19,8 +19,7 @@
     <TextView
       android:id="@+id/left"
       android:layout_width="match_parent"
-      android:text="123"
-      android:drawableLeft="@drawable/account_authenticate_area"
+      android:background="@drawable/account_authenticate_area"
       android:layout_height="match_parent" />
 
   </ScrollView>

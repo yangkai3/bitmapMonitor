@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat
     leftView = findViewById(R.id.left);
     rightView = findViewById(R.id.right);
 
-//    int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission
-//        .WRITE_EXTERNAL_STORAGE);
-//    if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-//      initAspect();
-//    } else {
-//      ActivityCompat.requestPermissions(this, new String[]{Manifest.permission
-//          .WRITE_EXTERNAL_STORAGE}, 1);
-//    }
+    int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission
+        .WRITE_EXTERNAL_STORAGE);
+    if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+      initAspect();
+    } else {
+      ActivityCompat.requestPermissions(this, new String[]{Manifest.permission
+          .WRITE_EXTERNAL_STORAGE}, 1);
+    }
   }
 
   public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull
@@ -64,17 +64,17 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat
 
   private void test(Logger logger) {
     // step1: decode resource
-    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable
-        .account_authenticate_area);
-    logger.log("call: Bitmap decodeResource(Resources, int)");
-    logger.log("\n" + "bitmap: " + bitmap + "\n\n");
-
-    bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.account_authenticate_area,
-        new BitmapFactory.Options());
-    final int width = bitmap.getWidth();
-    final int height = bitmap.getHeight();
-    logger.log("call: Bitmap decodeResource(Resources, int, Options)");
-    logger.log("\n" + "bitmap: " + bitmap + "\n\n");
+//    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable
+//        .account_authenticate_area);
+//    logger.log("call: Bitmap decodeResource(Resources, int)");
+//    logger.log("\n" + "bitmap: " + bitmap + "\n\n");
+//
+//    bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.account_authenticate_area,
+//        new BitmapFactory.Options());
+//    final int width = bitmap.getWidth();
+//    final int height = bitmap.getHeight();
+//    logger.log("call: Bitmap decodeResource(Resources, int, Options)");
+//    logger.log("\n" + "bitmap: " + bitmap + "\n\n");
 
     // step2: decode file
     File file = new File(Environment.getExternalStorageDirectory(), "img.png");
